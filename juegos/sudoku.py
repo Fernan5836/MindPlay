@@ -67,16 +67,16 @@ class CeldaSudoku(QPushButton):
             background-color: {color_hover.name()};
         }}
         QPushButton:disabled {{
-            color: #e74c3c;  // Texto más oscuro para números fijos
+            color: #e74c3c;
             font-weight: bold;
         }}
         """
 
         # Agregar bordes más gruesos para separar regiones 3x3
         if self.fila % 3 == 0 and self.fila != 0:
-            estilo += "border-top: 4px solid blue;"
+            estilo += "border-top: 10px solid black;"
         if self.columna % 3 == 0 and self.columna != 0:
-            estilo += "border-left: 4px solid blue;"
+            estilo += "border-left: 10px solid black;"
 
         self.setStyleSheet(estilo)
 
@@ -142,9 +142,9 @@ class JuegoSudoku(JuegoBase):
 
                 # Añadir bordes más gruesos para separar las regiones 3x3
                 if i % 3 == 0 and i != 0:
-                    celda.setStyleSheet(celda.styleSheet() + "border-top: 10px solid blue;")
+                    celda.setStyleSheet(celda.styleSheet() + "border-top: 10px solid black;")
                 if j % 3 == 0 and j != 0:
-                    celda.setStyleSheet(celda.styleSheet() + "border-left: 10px solid blue;")
+                    celda.setStyleSheet(celda.styleSheet() + "border-left: 10px solid black;")
 
     def iniciar_juego(self):
         dificultad = self.dificultad_combo.currentText()
