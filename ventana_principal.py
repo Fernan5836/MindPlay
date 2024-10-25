@@ -125,7 +125,7 @@ class VentanaPrincipal(QMainWindow):
         titulo.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         # Subtítulo
-        subtitulo = QLabel("Entrena tu mente mientras te diviertes")
+        subtitulo = QLabel("Diviertete mientras entrenas tu mente")
         subtitulo.setFont(QFont('Arial', 14))
         subtitulo.setStyleSheet("color: #E3F2FD;")
         subtitulo.setAlignment(Qt.AlignmentFlag.AlignCenter)
