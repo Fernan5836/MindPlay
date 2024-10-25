@@ -186,9 +186,16 @@ class VentanaPrincipal(QMainWindow):
 
         scroll_area.setWidget(juegos_widget)
 
+        # Etiqueta de copyright
+        copyright_label = QLabel("© 2024 MindPlay - Fernando Pérez. Todos los derechos reservados.")
+        copyright_label.setFont(QFont('Arial', 10))
+        copyright_label.setStyleSheet("color: #757575;")
+        copyright_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
         # Agregar widgets al layout principal
         main_layout.addWidget(header_widget)
         main_layout.addWidget(scroll_area)
+        main_layout.addWidget(copyright_label)  # Agregar el copyright al final
 
         self.setCentralWidget(main_widget)
 
